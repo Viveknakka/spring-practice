@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="allien1" class="com.demo.mine.Allien" autowire="byName">
+   <!--    <property name="age" value="25"></property>
+        <property name="lap" ref="laptop"></property>
+        -->   
+        <!-- <constructor-arg index="1" ref="laptop"/>
+        <constructor-arg index="0" value="21"/>
+         -->
+        <property name="age" value="26"></property>
+        <property name="com" ref="desktop"></property>
+
+    </bean>
+    <bean id="desktop" class="com.demo.mine.Desktop"></bean>
+    <bean id="laptop" class="com.demo.mine.Laptop" scope="prototype">
+    </bean>
+
+</beans>
